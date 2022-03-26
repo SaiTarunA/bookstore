@@ -65,10 +65,12 @@ const EditInventory = () => {
         })
       }
     })
-}, [])
-  uniqueBooks.map((book)=>{
-    set(ref(db, `/${book.id}`), book)
-  })
+  }, [])
+  React.useEffect(() => {
+    uniqueBooks.map((book)=>{
+      set(ref(db, `/${book.id}`), book)
+    })
+  }, [])
   
   
   return (
