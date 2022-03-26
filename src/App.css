@@ -37,7 +37,39 @@
   outline: none;
   border-radius: 10px;
 }
-
+.ResultsComp{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.Card{
+  width: 230px;
+  height: 330px;
+  margin: 20px auto;
+  border-radius: 5px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.Img{
+  width: 155px;
+  height: 200px;
+  margin: 10px auto;
+  overflow: hidden;
+}
+.BookInfo{
+  height: 110px;
+}
+.BookInfo p{
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  font-size: 14px;
+  height: 35px;
+  margin: auto 5px;
+  overflow: hidden;
+}
+.BookInfo button{
+  width: 40%;
+  margin: 2.5%;
+}
 .App-link {
   color: #61dafb;
 }

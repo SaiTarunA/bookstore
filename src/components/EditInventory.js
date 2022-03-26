@@ -2,6 +2,7 @@ import React from 'react'
 import { useState,useEffect } from 'react'
 import axios from 'axios'
 import { db } from '../firebase';
+import '../App.css'
 import { set, ref, onValue } from 'firebase/database';
 
 const EditInventory = () => {
@@ -81,11 +82,11 @@ const EditInventory = () => {
         <button type="submit">Search</button>
         {searchValueSave!==""?<div>Search results for {searchValueSave}</div> : "" }
       </form>
-      <div style={{display: "flex", flexWrap: "wrap", width: "max-width"}}>
+      <div className='ResultsComp'>
       {searchResult.map(Book=>(
-          <div style={{display: "flex", flexDirection: "column", width: "150px"}}><div style={{width: "120px", height: "180px", margin:"0px auto", overflow:"hidden"}}><img style={{width: "120px"}} src={Book.volumeInfo.imageLinks === undefined
+          <div className='Card'><div className='Img'><img style={{width: "155px"}} src={Book.volumeInfo.imageLinks === undefined
             ? ""
-            : `${Book.volumeInfo.imageLinks.thumbnail}`} alt="No Thumbnail"></img></div><span>{Book.volumeInfo.title}</span><span>By {Book.volumeInfo.authors[0]}</span><button onClick={()=>addBook(Book.id)}>Add</button><button onClick={()=>deleteBook(Book.id)}>Delete</button></div>
+            : `${Book.volumeInfo.imageLinks.thumbnail}`} alt="No Thumbnail"></img></div><div className='BookInfo'><p>{Book.volumeInfo.title}</p><button onClick={()=>addBook(Book.id)}>Add</button><button onClick={()=>deleteBook(Book.id)}>Delete</button><p>By {Book.volumeInfo.authors[0]}</p></div></div>
       ))}
       </div>
     </div>
