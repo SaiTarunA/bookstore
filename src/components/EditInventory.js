@@ -37,7 +37,6 @@ const EditInventory = () => {
     setBookStore([...BooksDuplicate])
     const unique = Array.from(new Set([...BookStore].concat(adding)))
     setuniqueBooks(unique)
-    console.log("added")
   }
   function deleteBook(id){
     
@@ -54,7 +53,6 @@ const EditInventory = () => {
     setBookStore([...BooksDuplicate])
     const unique = Array.from(new Set([...BookStore]))
     setuniqueBooks(unique)
-    console.log("deleted")
   }
   React.useEffect(() => {
     
