@@ -18,6 +18,7 @@ const Search = () => {
   }
   return (
     <div>
+      <h1>Search Books</h1>
       <form onSubmit={handleSubmit}>
         <input type="text" placeholder="Search" onChange={(e)=>setsearchValue(e.target.value)} value={searchValue} name="inputName"/>
         <button type="submit">Search</button>

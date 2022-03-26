@@ -24,6 +24,20 @@
   color: white;
 }
 
+.Link{
+  color: #282c34;
+  text-decoration: none;
+  line-height: 80px;
+
+}
+.Link[tabindex]:focus {
+  background-color: #282c34;
+  color: azure;
+  padding: 20px;
+  outline: none;
+  border-radius: 10px;
+}
+
 .App-link {
   color: #61dafb;
 }
