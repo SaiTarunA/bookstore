@@ -38,14 +38,13 @@
   border-radius: 10px;
 }
 .ResultsComp{
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
 }
 .Card{
   width: 230px;
   height: 330px;
-  margin: 20px 10px;
+  margin: 20px auto;
   border-radius: 5px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
